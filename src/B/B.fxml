@@ -40,58 +40,58 @@
                         </JFXButton>
                         <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" onAction="#moveE" onMouseEntered="#mosenter2" onMouseExited="#mosexit2" prefHeight="70.0" prefWidth="66.0" textFill="WHITE">
                            <graphic>
-                              <FontAwesomeIconView fx:id="ic2" fill="WHITE" glyphName="KEY" size="25.0" />
+                              <FontAwesomeIconView fx:id="ic2" fill="WHITE" glyphName="DELICIOUS" size="25.0" />
                            </graphic>
                            <tooltip>
-                              <Tooltip text="Encrypt Text">
+                              <Tooltip text="Data Perangkat">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Tooltip>
                            </tooltip>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="80.0" onMouseEntered="#mosenter3" onMouseExited="#mosexit3" prefHeight="70.0" prefWidth="66.0" textFill="WHITE">
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="80.0" onAction="#moveK" onMouseEntered="#mosenter3" onMouseExited="#mosexit3" prefHeight="70.0" prefWidth="66.0" textFill="WHITE">
                            <graphic>
-                              <FontAwesomeIconView fx:id="ic3" fill="WHITE" glyphName="FILE_CODE_ALT" size="25.0" />
+                              <FontAwesomeIconView fx:id="ic3" fill="WHITE" glyphName="MAP" size="25.0" />
                            </graphic>
                            <tooltip>
-                              <Tooltip text="Crypto File">
+                              <Tooltip text="Data Lokasi">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Tooltip>
                            </tooltip>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="153.0" onMouseEntered="#mosenter4" onMouseExited="#mosexit4" prefHeight="70.0" prefWidth="66.0" textFill="WHITE">
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="153.0" onAction="#moveL" onMouseEntered="#mosenter4" onMouseExited="#mosexit4" prefHeight="70.0" prefWidth="66.0" textFill="WHITE">
                            <graphic>
-                              <FontAwesomeIconView fx:id="ic4" fill="WHITE" glyphName="FILE_IMAGE_ALT" size="25.0" />
+                              <FontAwesomeIconView fx:id="ic4" fill="WHITE" glyphName="WIFI" size="25.0" />
                            </graphic>
                            <tooltip>
-                              <Tooltip text="Steganography">
+                              <Tooltip text="Jaringan">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Tooltip>
                            </tooltip>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="223.0" onMouseEntered="#mosenter5" onMouseExited="#mosexit5" prefHeight="70.0" prefWidth="66.0" textFill="WHITE">
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="223.0" onAction="#moveO" onMouseEntered="#mosenter5" onMouseExited="#mosexit5" prefHeight="70.0" prefWidth="66.0" textFill="WHITE">
                            <graphic>
-                              <FontAwesomeIconView fx:id="ic5" fill="WHITE" glyphName="USERS" size="25.0" />
+                              <FontAwesomeIconView fx:id="ic5" fill="WHITE" glyphName="SORT_ALPHA_DESC" size="25.0" />
                            </graphic>
                            <tooltip>
-                              <Tooltip text="Contact">
+                              <Tooltip text="Detail Perangkat">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Tooltip>
                            </tooltip>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="293.0" onMouseEntered="#mosenter6" onMouseExited="#mosexit6" prefHeight="70.0" prefWidth="66.0" textFill="WHITE">
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="293.0" onAction="#moveN" onMouseEntered="#mosenter6" onMouseExited="#mosexit6" prefHeight="70.0" prefWidth="66.0" textFill="WHITE">
                            <graphic>
-                              <FontAwesomeIconView fx:id="ic6" fill="WHITE" glyphName="WECHAT" size="25.0" />
+                              <FontAwesomeIconView fx:id="ic6" fill="WHITE" glyphName="DESKTOP" size="25.0" />
                            </graphic>
                            <tooltip>
-                              <Tooltip text="Chat Messaging">
+                              <Tooltip text="Monitoring">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -142,8 +142,8 @@
                <left>
                   <HBox alignment="CENTER" prefHeight="44.0" prefWidth="195.0" BorderPane.alignment="CENTER">
                      <children>
-                        <FontAwesomeIconView fill="RED" glyphName="STAR" size="28.0" wrappingWidth="40.0" />
-                        <Label text="KNPB Application" textFill="WHITE">
+                        <FontAwesomeIconView fill="#00e9ff" glyphName="CLOUD" size="28.0" wrappingWidth="40.0" />
+                        <Label text="Monitoring App" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
@@ -151,6 +151,13 @@
                      </children>
                   </HBox>
                </left>
+               <center>
+                  <Label fx:id="title" alignment="CENTER" prefHeight="36.0" prefWidth="334.0" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Liberation Mono Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </center>
             </JFXToolbar>
          </children>
       </AnchorPane>

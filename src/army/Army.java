@@ -27,7 +27,7 @@ public class Army extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/A/A.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/B/B.fxml"));
 
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);

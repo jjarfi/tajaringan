@@ -99,6 +99,7 @@ public class AController implements Initializable {
         try {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("KELUAR");
+            alert.setHeaderText(null);
             alert.setContentText("Yakin Ingin Keluar ?");
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK) {
@@ -120,28 +121,14 @@ public class AController implements Initializable {
         alert.setContentText("Email : opmarmy@protonmail.com");
         alert.show();
 
-       // dialog();
     }
 
-    private void dialog() {
-        JFXDialogLayout content = new JFXDialogLayout();
-        content.setHeading(new Text("Kaimana Papua"));
-        content.setBody(new Text("Hello mmmmmmmmmmmmmmmmmmmmmmmmmorld"));
-        JFXDialog dia = new JFXDialog(st, content, JFXDialog.DialogTransition.CENTER);
-        JFXButton btn = new JFXButton("Okey");
-        btn.setOnAction((ActionEvent event) -> {
-            dia.close();
-        });
-        content.setActions(btn);
-        dia.show();
-
-    }
 
     @FXML
     private void l(ActionEvent event) {
 
         try {
-            if (u.getText().equals("admin") && p.getText().equals("admin")) {
+            if (u.getText().equals("admin") && p.getText().equals("123")) {
                 Parent roort = FXMLLoader.load(getClass().getResource("/B/B.fxml"));
                 Stage stage = new Stage();
                 Scene scene = new Scene(roort);

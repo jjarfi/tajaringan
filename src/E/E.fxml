@@ -12,6 +12,7 @@
    <children>
       <AnchorPane layoutX="-1.0" prefHeight="539.0" prefWidth="840.0">
          <children>
+            <AnchorPane fx:id="jendela" prefHeight="497.0" prefWidth="840.0" />
             <JFXToolbar layoutY="498.0" prefHeight="41.0" prefWidth="840.0" style="-fx-background-color: black;">
                <effect>
                   <DropShadow />
@@ -19,29 +20,14 @@
                <center>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="46.0" prefWidth="79.0">
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="430.0" layoutY="10.0" onAction="#moveI" prefHeight="46.0" prefWidth="79.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CONNECTDEVELOP" size="25.0" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="470.0" layoutY="10.0" onAction="#moveF" prefHeight="46.0" prefWidth="79.0">
                            <graphic>
                               <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="25.0" />
-                           </graphic>
-                        </JFXButton>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="391.0" layoutY="10.0" prefHeight="46.0" prefWidth="79.0">
-                           <graphic>
-                              <FontAwesomeIconView fill="WHITE" glyphName="NEWSPAPER_ALT" size="25.0" />
-                           </graphic>
-                        </JFXButton>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="430.0" layoutY="10.0" prefHeight="46.0" prefWidth="79.0">
-                           <graphic>
-                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="25.0" />
-                           </graphic>
-                        </JFXButton>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="470.0" layoutY="10.0" prefHeight="46.0" prefWidth="79.0">
-                           <graphic>
-                              <FontAwesomeIconView fill="WHITE" glyphName="PHOTO" size="25.0" />
-                           </graphic>
-                        </JFXButton>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="470.0" layoutY="10.0" prefHeight="46.0" prefWidth="79.0">
-                           <graphic>
-                              <FontAwesomeIconView fill="WHITE" glyphName="VIDEO_CAMERA" size="25.0" />
                            </graphic>
                         </JFXButton>
                         <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="509.0" layoutY="10.0" prefHeight="46.0" prefWidth="79.0">
@@ -49,14 +35,19 @@
                               <FontAwesomeIconView fill="WHITE" glyphName="GLOBE" size="25.0" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="549.0" layoutY="10.0" prefHeight="46.0" prefWidth="79.0">
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="509.0" layoutY="10.0" prefHeight="46.0" prefWidth="79.0">
                            <graphic>
-                              <FontAwesomeIconView fill="WHITE" glyphName="PRINT" size="25.0" />
+                              <FontAwesomeIconView fill="WHITE" glyphName="BUG" size="25.0" />
                            </graphic>
                         </JFXButton>
                         <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="509.0" layoutY="10.0" prefHeight="46.0" prefWidth="79.0">
                            <graphic>
-                              <FontAwesomeIconView fill="WHITE" glyphName="HAND_GRAB_ALT" size="25.0" />
+                              <FontAwesomeIconView fill="WHITE" glyphName="COMMENT_ALT" size="25.0" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="233.0" layoutY="10.0" prefHeight="46.0" prefWidth="79.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PENCIL_SQUARE_ALT" size="25.0" />
                            </graphic>
                         </JFXButton>
                      </children>
