@@ -10,7 +10,7 @@ package Scan;
  * @author pacevil
  */
 public class Node {
-       String ip;
+    String ip;
     String mac;
     String CanonicalHostName;
     String HostName;
@@ -18,9 +18,10 @@ public class Node {
     boolean isReachable;
     int progressBar;
 
-    public Node() { }
+    public Node() {
+    }
 
-    Node(String ip, String mac, int progressBar){
+    public Node(String ip, String mac, int progressBar){
         this.ip = ip;
         this.isReachable = true;
         this.progressBar = progressBar;        

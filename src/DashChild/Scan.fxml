@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextArea?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,24 +18,24 @@
    <children>
       <AnchorPane layoutX="-1.0" prefHeight="497.0" prefWidth="839.0" style="-fx-background-color: #37474F;">
          <children>
-            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="103.0" prefWidth="517.0" style="-fx-background-color: #37474F;">
+            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="97.0" prefWidth="517.0" style="-fx-background-color: #37474F;">
                <effect>
                   <DropShadow />
                </effect>
                <children>
-                  <Label layoutY="-1.0" prefHeight="23.0" prefWidth="117.0" text=" IP Scanning" textFill="WHITE">
+                  <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="3.0" prefHeight="23.0" prefWidth="150.0" text=" IP Scanning" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <VBox layoutX="5.0" layoutY="31.0" prefHeight="65.0" prefWidth="224.0">
+                  <VBox layoutX="14.0" layoutY="31.0" prefHeight="65.0" prefWidth="224.0">
                      <children>
                         <Label text="Enter IP" textFill="WHITE" />
                         <TextField fx:id="eip" prefHeight="37.0" prefWidth="385.0" />
                      </children>
                   </VBox>
-                  <Label layoutX="241.0" layoutY="56.0" text="To" textFill="WHITE" />
-                  <VBox layoutX="269.0" layoutY="31.0" prefHeight="65.0" prefWidth="224.0">
+                  <Label layoutX="243.0" layoutY="56.0" text="To" textFill="WHITE" />
+                  <VBox layoutX="265.0" layoutY="31.0" prefHeight="65.0" prefWidth="238.0">
                      <children>
                         <Label text="Range IP" textFill="WHITE" />
                         <TextField fx:id="rip" prefHeight="37.0" prefWidth="385.0" />
@@ -39,12 +43,29 @@
                   </VBox>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="11.0" layoutY="128.0" prefHeight="363.0" prefWidth="817.0" style="-fx-background-color: black; -fx-background-radius: 0.3cm;">
+            <AnchorPane layoutX="11.0" layoutY="127.0" prefHeight="364.0" prefWidth="817.0" style="-fx-background-color: black;">
                <effect>
                   <DropShadow />
                </effect>
                <children>
-                  <JFXTextArea fx:id="output" layoutY="26.0" prefHeight="320.0" prefWidth="817.0" />
+                  <TextArea fx:id="txtout" prefHeight="364.0" prefWidth="293.0" />
+                  <TableView fx:id="tabout" layoutX="293.0" onDragDetected="#getInetConfig" onSort="#StartIPscan" prefHeight="364.0" prefWidth="523.0">
+                    <columns>
+                        <TableColumn fx:id="kolip1" prefWidth="59.0" text="No" />
+                      <TableColumn fx:id="kolip" prefWidth="154.0" text="IP Address" />
+                        <TableColumn fx:id="kolip11" prefWidth="156.0" text="MAC Address" />
+                        <TableColumn fx:id="kolstatus" prefWidth="152.0" text="Status" />
+                    </columns>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Reset" />
+                              <MenuItem mnemonicParsing="false" onAction="#l" text="Scan Open Port" />
+                              <MenuItem mnemonicParsing="false" onAction="#sniffing" text="Sniffing" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="550.0" layoutY="17.0" prefHeight="97.0" prefWidth="274.0" style="-fx-background-color: #37474F; -fx-background-radius: 0.3cm;">
@@ -65,7 +86,7 @@
                         <DropShadow />
                      </effect>
                   </JFXButton>
-                  <JFXButton fx:id="reset" layoutX="143.0" layoutY="39.0" onAction="#resetall" prefHeight="37.0" prefWidth="93.0" style="-fx-background-color: black;" text="Reset" textFill="WHITE">
+                  <JFXButton layoutX="153.0" layoutY="39.0" onAction="#reset" prefHeight="37.0" prefWidth="93.0" style="-fx-background-color: black;" text="Reset" textFill="WHITE">
                      <graphic>
                         <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="16.0" />
                      </graphic>

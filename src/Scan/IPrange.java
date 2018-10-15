@@ -12,11 +12,11 @@ import java.util.ArrayList;
  * @author pacevil
  */
 public class IPrange {
-    private javax.swing.JFrame frame;
+ 
     private String from = "";
     private String to = "";
-    private int[] ip1 = {0,0,0,0};//holds the numeric ip
-    private int[] ip2 = {0,0,0,0};
+    private final int[] ip1 = {0,0,0,0};//holds the numeric ip
+    private final int[] ip2 = {0,0,0,0};
     ArrayList<String> range;
     String subnet;
     String netType; 
@@ -37,7 +37,7 @@ public class IPrange {
     //convert from String ip to int[] ip
     public void StrToIP()
     {
-        if(from == "" || from == null)
+        if("".equals(from) || from == null)
         {
             this.showEnterIpMessage();
             return;
@@ -95,7 +95,8 @@ public class IPrange {
                 range.add(addr);
             }
         }
-        else System.out.println("Enter correct address range!");
+        else 
+            System.out.println("Enter correct address range!");
    }
     public ArrayList<String> getRange()
     {
