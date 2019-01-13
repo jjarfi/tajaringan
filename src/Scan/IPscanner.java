@@ -5,7 +5,7 @@
  */
 package Scan;
 
-import DashChild.ScanController;
+import Controller.S;
 import com.jfoenix.controls.JFXProgressBar;
 import java.io.IOException;
 import java.net.InetAddress;
@@ -23,12 +23,12 @@ import javafx.scene.control.TextArea;
  */
 public class IPscanner implements Runnable {
 
-    private final ObservableList<ScanController.Person> data
+    private final ObservableList<S.Person> data
             = FXCollections.observableArrayList();
 
-    TableView<ScanController.Person> tabout;
+    TableView<S.Person> tabout;
 
-    TableColumn<ScanController.Person, String> kolip;
+    TableColumn<S.Person, String> kolip;
     JFXProgressBar pb;
 
     final String THREAD_TAG;
@@ -57,7 +57,6 @@ public class IPscanner implements Runnable {
         return numOfHost;
     }
 
-
     @Override
     public void run() {
         for (int i = startIp; i < stopIp; i++) {
@@ -65,12 +64,12 @@ public class IPscanner implements Runnable {
                 InetAddress address = InetAddress.getByName(subnet + i);
                 System.out.println("Pinging: " + subnet + i);
                 //  textArea.appendText("Pinging: " + subnet + i + "\n");
-             //   pb.setProgress(i);//updating progress bar
+                //   pb.setProgress(i);//updating progress bar
                 ping = address.isReachable(TIMEOUT);
                 if (ping) {
                     System.out.println(subnet + i + online + "\n");
                     textArea.appendText(subnet + i + online + "\n");
- 
+
                     ipadd += subnet + i + Online;
                     numOfHost++;
 

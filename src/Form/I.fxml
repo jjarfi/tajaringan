@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import eu.hansolo.tilesfx.tools.FlowGridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="k" prefHeight="577.0" prefWidth="977.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.I">
+   <children>
+      <AnchorPane fx:id="J" layoutX="-1.0" prefHeight="577.0" prefWidth="984.0" style="-fx-background-color: #37474F;">
+         <children>
+            <Pane layoutX="14.0" layoutY="286.0" prefHeight="287.0" prefWidth="444.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="7.0" layoutY="2.0" prefHeight="18.0" prefWidth="148.0" text="SYSTEM INFO" textFill="WHITE">
+                     <font>
+                        <Font name="Courier New Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="14.0" layoutY="24.0" prefHeight="3.0" prefWidth="415.0" />
+                  <HBox layoutX="14.0" layoutY="36.0" prefHeight="20.0" prefWidth="415.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="12.0" prefWidth="159.0" text="IP Address     " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtip" prefHeight="29.0" prefWidth="271.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="14.0" layoutY="76.0" prefHeight="20.0" prefWidth="415.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="159.0" text="Hostname      " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txthost" prefHeight="20.0" prefWidth="271.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="14.0" layoutY="96.0" prefHeight="20.0" prefWidth="415.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="159.0" text="MAC Address  " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtmac" layoutX="241.0" layoutY="10.0" prefHeight="20.0" prefWidth="271.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="14.0" layoutY="116.0" prefHeight="20.0" prefWidth="415.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="159.0" text="Proxy Hostname" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtproxy" layoutX="241.0" layoutY="10.0" prefHeight="20.0" prefWidth="271.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="14.0" layoutY="134.0" prefHeight="20.0" prefWidth="415.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="159.0" text="Proxy Type" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtproxytype" layoutX="241.0" layoutY="10.0" prefHeight="20.0" prefWidth="271.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="14.0" layoutY="154.0" prefHeight="20.0" prefWidth="415.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="159.0" text="Proxy Port" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtproxyport" layoutX="241.0" layoutY="10.0" prefHeight="20.0" prefWidth="271.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="14.0" layoutY="174.0" prefHeight="20.0" prefWidth="415.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="159.0" text="OS Name" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtos" layoutX="241.0" layoutY="10.0" prefHeight="20.0" prefWidth="271.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="14.0" layoutY="194.0" prefHeight="20.0" prefWidth="415.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="159.0" text="OS Type" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtostipe" layoutX="241.0" layoutY="10.0" prefHeight="20.0" prefWidth="271.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="14.0" layoutY="214.0" prefHeight="20.0" prefWidth="415.0">
+                     <children>
+                        <Label prefHeight="12.0" prefWidth="159.0" text="OS Version" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtversion" layoutX="241.0" layoutY="10.0" prefHeight="20.0" prefWidth="271.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="56.0" prefHeight="20.0" prefWidth="415.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="12.0" prefWidth="159.0" text="Gateway" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtgate" prefHeight="29.0" prefWidth="271.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Pane layoutX="554.0" layoutY="422.0" prefHeight="63.0" prefWidth="415.0" style="-fx-background-color: #37474F; -fx-background-radius: 0.1cm;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="136.0" text="DISK USED" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXProgressBar fx:id="dwn" layoutX="13.0" layoutY="30.0" prefHeight="20.0" prefWidth="393.0" progress="0.0" />
+               </children>
+            </Pane>
+            <AnchorPane layoutX="664.0" layoutY="14.0" prefHeight="248.0" prefWidth="305.0" style="-fx-background-color: #37474F;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Pane fx:id="paneone" layoutX="-1.0" layoutY="-3.0" prefHeight="248.0" prefWidth="305.0">
+                     <children>
+                        <FlowGridPane fx:id="flow" alignment="CENTER" layoutX="7.0" layoutY="7.0" noOfCols="1" noOfRows="1" prefHeight="233.0" prefWidth="291.0">
+                           <effect>
+                              <DropShadow />
+                           </effect></FlowGridPane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="340.0" layoutY="14.0" prefHeight="248.0" prefWidth="305.0" style="-fx-background-color: #37474F;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Pane fx:id="paneone1" layoutX="-1.0" layoutY="-3.0" prefHeight="248.0" prefWidth="305.0">
+                     <children>
+                        <FlowGridPane fx:id="flowdua" alignment="CENTER" layoutX="4.0" layoutY="7.0" noOfCols="1" noOfRows="1" prefHeight="233.0" prefWidth="291.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </FlowGridPane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="248.0" prefWidth="305.0" style="-fx-background-color: #37474F;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Pane fx:id="paneone11" layoutX="-1.0" layoutY="-3.0" prefHeight="248.0" prefWidth="305.0">
+                     <children>
+                        <FlowGridPane fx:id="flowtiga" alignment="CENTER" layoutX="4.0" layoutY="7.0" noOfCols="1" noOfRows="1" prefHeight="233.0" prefWidth="291.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </FlowGridPane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="554.0" layoutY="500.0" prefHeight="63.0" prefWidth="415.0" style="-fx-background-color: #37474F; -fx-background-radius: 0.1cm;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="136.0" text="MEMORI USED" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXProgressBar fx:id="dwn1" layoutX="13.0" layoutY="30.0" prefHeight="20.0" prefWidth="393.0" progress="0.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="554.0" layoutY="289.0" prefHeight="120.0" prefWidth="415.0" style="-fx-background-color: #37474F; -fx-background-radius: 0.1cm;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="136.0" text="NETWORK" textFill="WHITE">
+                     <font>
+                        <Font name="Jamrul" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXProgressBar fx:id="dwn2" layoutX="71.0" layoutY="30.0" prefHeight="20.0" prefWidth="334.0" progress="0.0" />
+                  <Label layoutX="14.0" layoutY="30.0" prefHeight="20.0" prefWidth="57.0" text="Signal" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="65.0" prefHeight="25.0" prefWidth="50.0" text="Device" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="90.0" prefHeight="20.0" prefWidth="50.0" text="BSSID" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtname" layoutX="71.0" layoutY="65.0" prefHeight="25.0" prefWidth="305.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

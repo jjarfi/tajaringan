@@ -15,7 +15,7 @@ public class IPrange {
  
     private String from = "";
     private String to = "";
-    private final int[] ip1 = {0,0,0,0};//holds the numeric ip
+    private final int[] ip1 = {0,0,0,0};
     private final int[] ip2 = {0,0,0,0};
     ArrayList<String> range;
     String subnet;

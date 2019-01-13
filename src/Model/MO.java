@@ -18,12 +18,14 @@ public class MO {
     private final StringProperty mkdprg;
     private final StringProperty mkds;
     private final StringProperty mip;
+     private final StringProperty mtgl;
 
-    public MO(String mid, String mkdprg, String mkds, String mip) {
+    public MO(String mid, String mkdprg, String mkds, String mip, String mtgl) {
         this.mid = new SimpleStringProperty (mid);
         this.mkdprg = new SimpleStringProperty (mkdprg);
         this.mkds = new SimpleStringProperty (mkds);
         this.mip = new SimpleStringProperty (mip);
+        this.mtgl = new SimpleStringProperty (mtgl);
         
         
      
@@ -76,6 +78,16 @@ public class MO {
     public StringProperty mipProperty() {
         return mip;
     }
-    
+     public final String getTgl() {
+        return mtgl.get();
+    }
+
+    public final void setMtgl(String value) {
+        mtgl.set(value);
+    }
+
+    public StringProperty mtglProperty() {
+        return mtgl;
+    }
 
 }

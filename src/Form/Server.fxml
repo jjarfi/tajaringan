@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="378.0" prefWidth="530.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="Controller.Server">
+   <children>
+      <AnchorPane prefHeight="378.0" prefWidth="530.0" style="-fx-background-color: #37474F;">
+         <children>
+            <JFXToolbar prefHeight="35.0" prefWidth="530.0" style="-fx-background-color: #000000;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXToolbar>
+            <TextField fx:id="txthost" layoutX="137.0" layoutY="127.0" prefHeight="35.0" prefWidth="203.0" stylesheets="@../CSS/jarfi.css" text="localhost" />
+            <TextField fx:id="txtport" layoutX="396.0" layoutY="127.0" prefHeight="35.0" prefWidth="103.0" stylesheets="@../CSS/jarfi.css" text="3306" />
+            <TextField fx:id="txtdb" layoutX="135.0" layoutY="173.0" prefHeight="35.0" prefWidth="366.0" stylesheets="@../CSS/jarfi.css" />
+            <TextField fx:id="txtuser" layoutX="135.0" layoutY="218.0" prefHeight="35.0" prefWidth="366.0" stylesheets="@../CSS/jarfi.css" />
+            <Text fill="WHITE" layoutX="25.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MySQL Host">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+            <Text fill="WHITE" layoutX="353.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Port">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+            <Text fill="WHITE" layoutX="25.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Database">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+            <Text fill="WHITE" layoutX="25.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+            <Text fill="WHITE" layoutX="27.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+            <Text fill="WHITE" layoutX="154.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PENGATURAN SERVER">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+            <JFXButton layoutX="254.0" layoutY="329.0" onAction="#btnKonek" prefHeight="35.0" prefWidth="116.0" styleClass="nav-button" stylesheets="@../CSS/jarfi.css" text="Connect">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="390.0" layoutY="329.0" prefHeight="35.0" prefWidth="116.0" styleClass="nav-button" stylesheets="@../CSS/jarfi.css" text="Default">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <PasswordField fx:id="txtpass" layoutX="140.0" layoutY="264.0" prefHeight="35.0" prefWidth="358.0" stylesheets="@../CSS/jarfi.css" />
+            <Text fx:id="txtstatus" fill="WHITE" layoutX="196.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status Server OFF">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

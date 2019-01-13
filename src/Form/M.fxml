@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rooot" prefHeight="618.0" prefWidth="1128.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.M">
+   <children>
+      <AnchorPane fx:id="root" layoutX="13.0" layoutY="21.0" onMouseDragged="#drag" onMousePressed="#pres" prefHeight="581.0" prefWidth="1083.0" style="-fx-background-color: #37474F;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <TableView fx:id="datatab" layoutY="58.0" prefHeight="523.0" prefWidth="691.0">
+              <columns>
+                <TableColumn prefWidth="63.0" text="No" />
+                <TableColumn prefWidth="118.0" text="Length" />
+                  <TableColumn prefWidth="215.0" text="Source" />
+                  <TableColumn prefWidth="190.0" text="Destination" />
+                  <TableColumn prefWidth="102.0" text="Protocol" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="cbdev" layoutX="14.0" layoutY="14.0" onMouseClicked="#Driver" prefHeight="34.0" prefWidth="340.0" promptText="Pilih Device Connection" />
+            <ComboBox fx:id="cbpaket" layoutX="366.0" layoutY="14.0" prefHeight="34.0" prefWidth="157.0" promptText="Select Packet" />
+            <Pane layoutX="693.0" layoutY="58.0" prefHeight="242.0" prefWidth="386.0" style="-fx-background-color: black;">
+               <children>
+                  <JFXTextArea prefHeight="229.0" prefWidth="386.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="693.0" layoutY="325.0" prefHeight="255.0" prefWidth="386.0" style="-fx-background-color: black;">
+               <children>
+                  <JFXTextArea prefHeight="242.0" prefWidth="386.0" />
+               </children>
+            </Pane>
+            <JFXButton layoutX="566.0" layoutY="14.0" onAction="#clickCapture" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: black;" text="Capture" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="674.0" layoutY="14.0" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: black;" text="Stop" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1081.0" layoutY="11.0" onAction="#tutup" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: red; -fx-background-radius: 4cm;">
+         <graphic>
+            <FontAwesomeIconView glyphName="CLOSE" size="19.0" />
+         </graphic>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>

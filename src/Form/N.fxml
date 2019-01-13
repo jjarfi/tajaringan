@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="618.0" prefWidth="984.0" style="-fx-background-color: #37474F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.N">
+   <children>
+      <AnchorPane fx:id="JEE" layoutX="-1.0" prefHeight="618.0" prefWidth="984.0">
+         <children>
+            <AnchorPane fx:id="J" layoutX="-1.0" layoutY="-1.0" prefHeight="618.0" prefWidth="984.0">
+               <children>
+                  <TableView fx:id="tabdata" layoutX="4.0" layoutY="4.0" onMouseClicked="#kliktab" prefHeight="316.0" prefWidth="984.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="kolip" editable="false" prefWidth="134.0" sortable="false" text="IP Address" />
+                        <TableColumn fx:id="kolmac" editable="false" prefWidth="134.0" sortable="false" text="MAC Address" />
+                        <TableColumn fx:id="kolkdp" editable="false" prefWidth="134.0" sortable="false" text="Kode Perangkat" />
+                        <TableColumn fx:id="kolnmp" editable="false" prefWidth="197.0" sortable="false" text="Nama Perangkat" />
+                        <TableColumn fx:id="kolkl" editable="false" prefWidth="197.0" sortable="false" text="Kode Lokasi" />
+                        <TableColumn fx:id="kolnml" editable="false" prefWidth="197.0" sortable="false" text="Nama Lokasi" />
+                     </columns>
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#ping" text="PING" />
+                              <MenuItem mnemonicParsing="false" onAction="#tracert" text="TRACERT ROUTE" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+                  <TabPane layoutX="3.0" layoutY="321.0" prefHeight="291.0" prefWidth="984.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="PING">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: black;">
+                                 <children>
+                                    <JFXTextArea fx:id="pingout" layoutX="7.0" layoutY="7.0" prefHeight="277.0" prefWidth="971.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font></JFXTextArea>
+                                    <JFXButton fx:id="btnpingstop" contentDisplay="GRAPHIC_ONLY" layoutX="934.0" layoutY="212.0" onAction="#stopPing" prefHeight="36.0" prefWidth="36.0" style="-fx-background-radius: 6cm; -fx-border-color: white; -fx-border-radius: 6cm; -fx-background-color: black;" visible="false">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#ff0101" glyphName="STOP" size="15.0" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="TRACERT ROUTE">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: black;">
+                                 <children>
+                                    <JFXTextArea fx:id="txttracert" layoutX="5.0" layoutY="5.0" prefHeight="257.0" prefWidth="591.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font></JFXTextArea>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="txtip" layoutX="50.0" layoutY="204.0" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

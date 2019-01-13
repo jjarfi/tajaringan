@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="root" prefHeight="618.0" prefWidth="984.0" style="-fx-background-color: #37474F;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.O">
+   <children>
+      <AnchorPane fx:id="JEE" layoutX="-1.0" prefHeight="618.0" prefWidth="984.0">
+         <children>
+            <AnchorPane fx:id="J" prefHeight="618.0" prefWidth="984.0">
+               <children>
+                  <AnchorPane fx:id="mo" layoutX="6.0" layoutY="7.0" prefHeight="610.0" prefWidth="306.0" style="-fx-background-color: white;">
+                     <children>
+                        <VBox layoutX="18.0" layoutY="23.0" prefHeight="62.0" prefWidth="273.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="137.0" text="ID Detail Perangkat" />
+                              <TextField fx:id="txtdet" prefHeight="39.0" prefWidth="419.0" />
+                           </children>
+                        </VBox>
+                        <JFXButton alignment="CENTER" layoutX="13.0" layoutY="557.0" onAction="#simpan" prefHeight="39.0" prefWidth="79.0" style="-fx-background-color: black;" text="Save" textFill="WHITE">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" layoutX="104.0" layoutY="557.0" onAction="#update" prefHeight="39.0" prefWidth="92.0" style="-fx-background-color: black;" text="Update" textFill="WHITE">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" layoutX="207.0" layoutY="557.0" onAction="#delete" prefHeight="39.0" prefWidth="79.0" style="-fx-background-color: black;" text="Delete" textFill="WHITE">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <VBox layoutX="16.0" layoutY="85.0" prefHeight="62.0" prefWidth="273.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="110.0" text="Kode Perangkat" />
+                              <ComboBox fx:id="kp" onAction="#loadprgkombo" onMouseClicked="#loadmanaprgkombo" prefHeight="42.0" prefWidth="230.0" promptText="Silahkan Pilih" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="16.0" layoutY="147.0" prefHeight="62.0" prefWidth="273.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="110.0" text="Nama Perangkat" />
+                              <TextField fx:id="txtnp" prefHeight="39.0" prefWidth="419.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="18.0" layoutY="209.0" prefHeight="62.0" prefWidth="273.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="110.0" text="Kode Lokasi" />
+                              <ComboBox fx:id="kl" onAction="#loadstkombo" onMouseClicked="#loadmanastkombo" prefHeight="43.0" prefWidth="227.0" promptText="Silahkan Pilih" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="16.0" layoutY="273.0" prefHeight="62.0" prefWidth="273.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="110.0" text="Nama Lokasi" />
+                              <TextField fx:id="txtnl" prefHeight="41.0" prefWidth="273.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="16.0" layoutY="335.0" prefHeight="62.0" prefWidth="273.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="110.0" text="IP Address" />
+                              <ComboBox fx:id="cip" onAction="#loadIPkombo" onMouseClicked="#loadmanaIPkombo" prefHeight="43.0" prefWidth="227.0" promptText="Silahkan Pilih" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="16.0" layoutY="397.0" prefHeight="62.0" prefWidth="273.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="110.0" text="MAC Address" />
+                              <TextField fx:id="txtmac" prefHeight="41.0" prefWidth="273.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="14.0" layoutY="468.0" prefHeight="62.0" prefWidth="273.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="165.0" text="Tanggal Penggunaan" />
+                              <DatePicker fx:id="tgl" prefHeight="42.0" prefWidth="274.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane hbarPolicy="ALWAYS" layoutX="315.0" layoutY="62.0" prefHeight="555.0" prefWidth="667.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="547.0" prefWidth="879.0">
+                           <children>
+                              <TableView fx:id="tabdet" layoutX="1.0" onMouseClicked="#setdaritabel" prefHeight="548.0" prefWidth="878.0" tableMenuButtonVisible="true">
+                                 <columns>
+                                    <TableColumn fx:id="kolid" editable="false" prefWidth="124.0" text="ID Detail" />
+                                    <TableColumn fx:id="kolkp" editable="false" prefWidth="162.0" text="Kode Perangkat" />
+                                    <TableColumn fx:id="kollok" editable="false" prefWidth="174.0" text="Kode Lokasi" />
+                                    <TableColumn fx:id="kolip" editable="false" prefWidth="204.0" text="IP Address" />
+                                    <TableColumn fx:id="koltgl" editable="false" prefWidth="204.0" text="Tanggal Penggunaan" />
+                                 </columns>
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" onAction="#reTable" text="Refresh" />
+                                          <MenuItem mnemonicParsing="false" onAction="#delete" text="Delete" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="924.0" layoutY="14.0" prefHeight="39.0" prefWidth="46.0" style="-fx-background-color: black;">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="19.0" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </JFXButton>
+                  <TextField fx:id="cari" layoutX="623.0" layoutY="17.0" onKeyTyped="#caridet" prefHeight="34.0" prefWidth="285.0" promptText="Search...." />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

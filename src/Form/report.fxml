@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="618.0" prefWidth="965.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Report">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="618.0" prefWidth="984.0" style="-fx-background-color: #37474F;">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="97.0" prefWidth="960.0" style="-fx-background-color: #37474F;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="3.0" prefHeight="23.0" prefWidth="150.0" text="Laporan" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="14.0" layoutY="31.0" prefHeight="58.0" prefWidth="356.0">
+                     <children>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="19.0" prefWidth="100.0" text="Filter by" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <ComboBox prefHeight="39.0" prefWidth="316.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="551.0" layoutY="31.0" prefHeight="65.0" prefWidth="290.0">
+                     <children>
+                        <Label textFill="WHITE" />
+                        <TextField prefHeight="37.0" prefWidth="294.0" promptText="Pencarian" />
+                     </children>
+                  </VBox>
+                  <JFXButton layoutX="853.0" layoutY="46.0" prefHeight="37.0" prefWidth="93.0" style="-fx-background-color: black;" text="Cari" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="16.0" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="11.0" layoutY="127.0" prefHeight="485.0" prefWidth="968.0" style="-fx-background-color: black;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ScrollPane prefHeight="485.0" prefWidth="755.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="488.0" prefWidth="1940.0">
+                           <children>
+                              <TableView fx:id="tabdata" prefHeight="485.0" prefWidth="1940.0" tableMenuButtonVisible="true">
+                                 <columns>
+                                    <TableColumn fx:id="kolid" prefWidth="194.0" text="ID Detail Perangkat" />
+                                    <TableColumn fx:id="kolkode" prefWidth="196.0" text="Kode Perangkat" />
+                                    <TableColumn fx:id="kolnama" prefWidth="192.0" text="Nama Perangkat" />
+                                    <TableColumn fx:id="kolstatus" prefWidth="192.0" text="Status" />
+                                    <TableColumn fx:id="kolkondisi" prefWidth="192.0" text="Kondisi" />
+                                    <TableColumn fx:id="kollokasi" prefWidth="192.0" text="Kode Lokasi" />
+                                    <TableColumn fx:id="kolnmlokasi" prefWidth="195.0" text="Nama Lokasi" />
+                                    <TableColumn fx:id="kolipaddr" prefWidth="199.0" text="Ip Address" />
+                                    <TableColumn fx:id="kolmac" prefWidth="199.0" text="Mac Address" />
+                                    <TableColumn fx:id="kolgateway" prefWidth="199.0" text="Gateway" />
+                                 </columns>
+                                 <contextMenu>
+                                    <ContextMenu>
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Cetak" />
+                                       </items>
+                                    </ContextMenu>
+                                 </contextMenu>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <VBox layoutX="752.0" layoutY="144.0" prefHeight="197.0" prefWidth="182.0">
+                     <children>
+                        <JFXCheckBox fx:id="ckLP" onAction="#ckButtonPerangkat" prefHeight="50.0" prefWidth="200.0" text="Laporan Perangkat" textFill="WHITE" />
+                        <JFXCheckBox fx:id="ckLK" layoutX="10.0" layoutY="10.0" onAction="#ckButtonLokasi" prefHeight="50.0" prefWidth="200.0" text="Laporan Lokasi" textFill="WHITE" />
+                        <JFXCheckBox fx:id="ckLLI" layoutX="10.0" layoutY="60.0" onAction="#ckButtonLogic" prefHeight="50.0" prefWidth="200.0" text="Laporan Logic IP" textFill="WHITE" />
+                        <JFXCheckBox fx:id="ckLDP" layoutX="10.0" layoutY="110.0" onAction="#ckButtonDetail" prefHeight="50.0" prefWidth="200.0" text="Laporan Detail Perangkat" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <JFXButton layoutX="784.0" layoutY="383.0" onAction="#PrintBTN" prefHeight="50.0" prefWidth="157.0" style="-fx-background-color: black; -fx-border-color: white;" text="Cetak" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PRINT" size="16.0" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

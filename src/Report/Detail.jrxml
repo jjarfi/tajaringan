@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2aa2b7b4-fc88-4665-b86f-1d477be36f1c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM det;]]>
+	</queryString>
+	<field name="id_dtl_prg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kd_prg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kd_lokasi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ip_add" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="118" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="99" width="256" height="18" uuid="be958419-1983-460a-a2fe-eb6d54e278a4"/>
+				<textElement verticalAlignment="Top">
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Detail Perangkat]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="438" y="99" width="116" height="19" uuid="717ea699-ce7b-4595-8a33-3c34845dae63"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="195" y="0" width="153" height="26" uuid="1fe98fa3-3c7f-4033-97cb-2c2bb731e923"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMART CAMPUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="26" width="339" height="20" uuid="cd40f7ea-9b80-4776-bb41-c8818e249680"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Universitas Sains Dan Teknologi Jayapura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="46" width="339" height="13" uuid="a065610c-59f6-4a92-939a-bdf4f2971f60"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Raya Padang Bulan - Sentani (Abepura)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="59" width="553" height="1" uuid="286d1383-bd1e-4bc7-aa71-6e0d37d0629a"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="3a0fb038-7de1-4bc2-ae64-1d9bbd36ae8d"/>
+			</line>
+			<line>
+				<reportElement x="0" y="18" width="555" height="1" uuid="ea1c7d1c-96b8-405a-8b91-3a254a8eaa76"/>
+			</line>
+			<line>
+				<reportElement x="32" y="1" width="1" height="18" uuid="e64b0d0a-c6cd-48fe-8c02-ae967736d0b2"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="1" width="31" height="17" uuid="9e8fbab8-c481-41e9-aee8-305b974e5156"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<line>
+				<reportElement x="136" y="1" width="1" height="17" uuid="bb549596-07c8-4ab5-95d9-24b92c39682f"/>
+			</line>
+			<staticText>
+				<reportElement x="33" y="1" width="103" height="17" uuid="204c20e4-7381-4321-9f92-bd96cbe036ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Detail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="0" width="105" height="17" uuid="440d18df-889b-48df-baf7-d0beef908fcb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Perangkat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="1" width="93" height="16" uuid="1fc148dd-82ac-4b43-9c1b-4be322ada7cd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Lokasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="1" width="103" height="16" uuid="3822a8ff-ebf0-4743-aa89-884db68e0e1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IP Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="1" width="116" height="16" uuid="e30adc00-619d-47eb-9d97-06faf472d2c5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="438" y="1" width="1" height="18" uuid="3b2ce36c-15f8-4e8c-91e3-e9e3f830d579"/>
+			</line>
+			<line>
+				<reportElement x="335" y="1" width="1" height="16" uuid="2cb64290-4f01-4dd3-a913-92b4f73b08c4"/>
+			</line>
+			<line>
+				<reportElement x="242" y="1" width="1" height="16" uuid="799439ea-128c-40d6-a8d3-1cbeca9557e9"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-18" width="1" height="39" uuid="7ea628dc-ceb8-4b83-90fe-f205ce6977b4"/>
+			</line>
+			<line>
+				<reportElement x="554" y="-18" width="1" height="39" uuid="a5f959e9-e237-45d0-b454-a381e86b8153"/>
+			</line>
+			<line>
+				<reportElement x="438" y="0" width="1" height="21" uuid="b1cf504e-4153-4d85-b33b-fb9499ddd1d6"/>
+			</line>
+			<line>
+				<reportElement x="335" y="0" width="1" height="21" uuid="540a4f75-ae2a-48ab-8554-c104d982a253"/>
+			</line>
+			<line>
+				<reportElement x="242" y="0" width="1" height="21" uuid="19b8901e-547a-4e76-af61-981961327235"/>
+			</line>
+			<line>
+				<reportElement x="136" y="0" width="1" height="21" uuid="3a88c8c5-d5b2-4fa1-83f1-5a7d0310179f"/>
+			</line>
+			<line>
+				<reportElement x="32" y="0" width="1" height="21" uuid="09937744-f007-4a15-bbbb-9cc5366aed26"/>
+			</line>
+			<textField>
+				<reportElement x="33" y="1" width="103" height="20" uuid="eda87f1b-4e5d-4a34-875e-454d13f6645c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id_dtl_prg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="1" width="106" height="20" uuid="afe6508e-2d51-4274-a8e1-cb20e5fbc103"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kd_prg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="1" width="93" height="20" uuid="8b090c8e-efb1-46d3-a2d9-0d1ab34817ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kd_lokasi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="1" width="103" height="20" uuid="c8e2b87c-c69c-40bb-807f-af92b5185bed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ip_add}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="438" y="1" width="116" height="20" uuid="e9f5e125-a21e-4883-b146-7e0e5704e9e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tgl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="1" width="31" height="20" uuid="6e99a2cb-7764-4605-bcd1-3a41889c2512"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+      Author     : jerryjarfi
+*/
+.root{}
+
+.nav-button {
+    -fx-border-width: 0.7px;
+    -fx-border-color: white;
+    -fx-border-radius: 0.3cm;
+    -fx-background-radius: 0.3cm;
+    -fx-text-fill: black;
+    -fx-font-size: 15px; 
+    -fx-background-color: white;
+}
+.nav-button:focused {
+    -fx-border-color: #EA5444;
+}
+.nav-button:hover {
+
+}
+.mprogress-bar>.track {
+	-fx-background-color: derive(rgb(200.0, 200.0, 200.0), 50.0%);
+
+	-fx-padding: 0.0;
+}
+
+.mprogress-bar>.bar {
+	-fx-background-color: #26B99A;
+	
+	
+        -fx-pref-width:3;
+	-fx-border-width: 0.0;
+	
+}
+
+.mprogress-bar:indeterminate>.bar {
+	-fx-background-color: derive(#26B99A, 50.0%);
+	
+	-fx-background-insets: 0.0;
+	-fx-border-width: 0.0;
+	
+}
+
+.custom-progress-bar>.track {
+/*	-fx-background-color: derive(#D5D5D5, 50.0%);*/
+        -fx-background-color:#CDCDCD;
+
+	-fx-padding: 0.0;
+}
+
+.custom-progress-bar>.bar {
+	-fx-background-color: #FFFFFF;
+	
+	-fx-background-insets: 0.0;
+        
+	-fx-border-width: 0.0;
+	
+}
+

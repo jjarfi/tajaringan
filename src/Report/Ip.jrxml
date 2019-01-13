@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2aa2b7b4-fc88-4665-b86f-1d477be36f1c">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     *,
+     tbl_logic_ip.`ip_add` AS tbl_logic_ip_ip_add,
+     tbl_logic_ip.`subnet_mask` AS tbl_logic_ip_subnet_mask,
+     tbl_logic_ip.`getway` AS tbl_logic_ip_getway,
+     tbl_logic_ip.`mac_add` AS tbl_logic_ip_mac_add
+FROM
+     `tbl_logic_ip` tbl_logic_ip]]>
+	</queryString>
+	<field name="tbl_logic_ip_ip_add" class="java.lang.String"/>
+	<field name="tbl_logic_ip_subnet_mask" class="java.lang.String"/>
+	<field name="tbl_logic_ip_getway" class="java.lang.String"/>
+	<field name="tbl_logic_ip_mac_add" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="118" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="99" width="177" height="18" uuid="be958419-1983-460a-a2fe-eb6d54e278a4"/>
+				<textElement verticalAlignment="Top">
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Logic IP]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="438" y="99" width="116" height="19" uuid="717ea699-ce7b-4595-8a33-3c34845dae63"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="195" y="0" width="153" height="26" uuid="1fe98fa3-3c7f-4033-97cb-2c2bb731e923"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMART CAMPUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="26" width="339" height="20" uuid="cd40f7ea-9b80-4776-bb41-c8818e249680"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Universitas Sains Dan Teknologi Jayapura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="46" width="339" height="13" uuid="a065610c-59f6-4a92-939a-bdf4f2971f60"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Raya Padang Bulan - Sentani (Abepura)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="59" width="553" height="1" uuid="286d1383-bd1e-4bc7-aa71-6e0d37d0629a"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="3a0fb038-7de1-4bc2-ae64-1d9bbd36ae8d"/>
+			</line>
+			<line>
+				<reportElement x="0" y="18" width="555" height="1" uuid="ea1c7d1c-96b8-405a-8b91-3a254a8eaa76"/>
+			</line>
+			<line>
+				<reportElement x="32" y="1" width="1" height="18" uuid="e64b0d0a-c6cd-48fe-8c02-ae967736d0b2"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="1" width="31" height="17" uuid="9e8fbab8-c481-41e9-aee8-305b974e5156"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<line>
+				<reportElement x="136" y="1" width="1" height="17" uuid="bb549596-07c8-4ab5-95d9-24b92c39682f"/>
+			</line>
+			<staticText>
+				<reportElement x="33" y="1" width="103" height="17" uuid="204c20e4-7381-4321-9f92-bd96cbe036ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IP Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="1" width="103" height="17" uuid="440d18df-889b-48df-baf7-d0beef908fcb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Subnet Mask]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="1" width="107" height="17" uuid="ec3ac7ba-f09a-407d-9104-3595b6aaa65f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gateway]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="1" width="205" height="17" uuid="6f8ce74a-2f01-43ef-85ed-3d0b888fd8c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAC Address]]></text>
+			</staticText>
+			<line>
+				<reportElement x="240" y="1" width="1" height="17" uuid="533f4a92-5310-4193-8002-e584c857cd0d"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-18" width="1" height="41" uuid="7ea628dc-ceb8-4b83-90fe-f205ce6977b4"/>
+			</line>
+			<line>
+				<reportElement x="554" y="-18" width="1" height="41" uuid="a5f959e9-e237-45d0-b454-a381e86b8153"/>
+			</line>
+			<line>
+				<reportElement x="32" y="0" width="1" height="23" uuid="409836ff-0ef6-4e0a-bc85-6e81166d5476"/>
+			</line>
+			<line>
+				<reportElement x="136" y="0" width="1" height="23" uuid="dcbbd56b-de6a-41a2-969c-cc3468025940"/>
+			</line>
+			<line>
+				<reportElement x="348" y="-18" width="1" height="41" uuid="f5789809-ed86-430d-99c4-8575d2254ba5"/>
+			</line>
+			<line>
+				<reportElement x="240" y="-1" width="1" height="24" uuid="ce3a99c9-6581-45d4-af65-eefa6c36daa7"/>
+			</line>
+			<textField>
+				<reportElement x="33" y="3" width="103" height="20" uuid="728c5d7a-0a46-4187-b83c-1db9fafc5233"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_logic_ip_ip_add}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="3" width="103" height="20" uuid="82d347a3-dbe3-44bf-a3e1-75661e45beab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_logic_ip_subnet_mask}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="3" width="107" height="20" uuid="84ff6113-fc15-477e-903b-9647ba7301f3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_logic_ip_getway}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="349" y="3" width="205" height="20" uuid="93030cb9-813c-43b8-bc39-e2c0ef919bc2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tbl_logic_ip_mac_add}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="3" width="31" height="20" uuid="051d24e3-1737-49ff-bf9b-1a6551693cba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="69" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="209" y="34" width="80" height="20" uuid="8327a6d0-20b7-4f0e-b99b-530a5ec3bcc0"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="289" y="34" width="40" height="20" uuid="a7d0768c-46f3-45c1-b79f-0be575c799f2"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

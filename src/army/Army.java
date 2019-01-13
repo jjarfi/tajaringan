@@ -5,34 +5,39 @@
  */
 package army;
 
-import java.awt.Image;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import Database.DBModel;
+import Function.Function;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import static javafx.stage.StageStyle.TRANSPARENT;
-import javax.imageio.ImageIO;
 
 /**
  *
- * @author pacevil
+ * @author Rexnet
  */
 public class Army extends Application {
 
+    Function function = new Function();
+
+//    public Army() {
+//
+//        DBModel model = new DBModel();
+//        model.createDataBase();
+//    }
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/B/B.fxml"));
-
+        Parent root = FXMLLoader.load(getClass().getResource(Function.HOME));
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         stage.initStyle(TRANSPARENT);
         stage.setScene(scene);
+        stage.setTitle("Monitoring App");
+        //stage.getIcons().add(new Image(getClass().getResource(icon).toExternalForm()));
         stage.show();
     }
 
@@ -41,10 +46,7 @@ public class Army extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-       
 
     }
-
-   
 
 }

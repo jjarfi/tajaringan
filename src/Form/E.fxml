@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="J" prefHeight="618.0" prefWidth="984.0" style="-fx-background-color: #37474F;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.E">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="618.0" prefWidth="984.0">
+         <children>
+            <AnchorPane fx:id="jendela" prefHeight="577.0" prefWidth="984.0" />
+            <JFXToolbar layoutY="577.0" prefHeight="41.0" prefWidth="984.0" style="-fx-background-color: black;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <center>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="430.0" layoutY="10.0" onAction="#moveI" prefHeight="46.0" prefWidth="79.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CONNECTDEVELOP" size="25.0" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="470.0" layoutY="10.0" onAction="#moveF" prefHeight="46.0" prefWidth="79.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="25.0" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="509.0" layoutY="10.0" prefHeight="46.0" prefWidth="79.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BUG" size="25.0" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </center>
+            </JFXToolbar>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

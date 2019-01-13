@@ -1,0 +1,67 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+      Author     : jerryjarfi
+*/
+
+.nav-button:hover {
+    -fx-background-color:#00cff6;
+}
+.nav-button {
+    -fx-background-color: #ffffff;
+}
+.nav-button:pressed {
+    -fx-background-color: #027ac0;
+}
+
+.mprogress-bar>.track {
+    -fx-background-color: derive(rgb(200.0, 200.0, 200.0), 50.0%);
+    -fx-padding: 0.0;
+}
+
+.mprogress-bar>.bar {
+    -fx-background-color: #26B99A;
+    -fx-pref-width:3;
+    -fx-border-width: 0.0;
+
+}
+
+.mprogress-bar:indeterminate>.bar {
+    -fx-background-color: derive(#26B99A, 50.0%);
+    -fx-background-insets: 0.0;
+    -fx-border-width: 0.0;
+
+}
+
+.custom-progress-bar>.track {
+    /*	-fx-background-color: derive(#D5D5D5, 50.0%);*/
+    -fx-background-color:#CDCDCD;
+    -fx-padding: 0.0;
+}
+
+.custom-progress-bar>.bar {
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 0.0;
+    -fx-border-width: 0.0;
+}
+.text-field {
+    -fx-border-width: 0.7px;
+    -fx-border-color: #027ac0;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-text-fill: black;
+    -fx-font-size: 15px; 
+    -fx-padding: 5px 35px 5px 15px;
+    -fx-background-color: white;
+}
+.text-field:focused {
+    -fx-border-color: #EA5444;
+}
+.text-field:hover {
+
+}
+
+
